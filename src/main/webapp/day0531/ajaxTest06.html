@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js
+"></script>
+<script type="text/javascript">
+$(function(){
+	$.ajax({
+		url:"ActionWidthData.jsp",
+		data:{name:"tiger",age:25},
+		success:function(r){
+			$("#box").append(r);
+		}
+	})
+});
+</script>
+</head>
+<body>
+	서버로 부터 응답한 데이터
+	<hr>
+	<div id="box"></div>	
+</body>
+</html>
+
+
+
+

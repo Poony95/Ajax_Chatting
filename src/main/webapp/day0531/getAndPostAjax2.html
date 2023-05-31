@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js
+"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#btnLoad").click(function(){
+		$("#box").load("/test01/Hello");
+	});
+	
+	$("#btnGET").click(function(){
+		$.get("/test01/Hello",function(data){
+			$("#box").html(data);
+		});
+	});
+	
+	$("#btnPOST").click(function(){
+		$.post("/test01/Hello",function(data){
+			$("#box").html(data);
+		});
+	});
+	
+	
+})
+</script>
+</head>
+<body>
+	<div id="box"></div>
+	<hr>
+	<button id="btnGET">get방식의 Ajax통신하기</button>
+	<button id="btnPOST">post방식의 Ajax통신하기</button>
+	<button id="btnLoad">load함수 이용하기</button>
+	
+</body>
+</html>
+
+
+
+
